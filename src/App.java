@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class App {
     private static int NoSeatsAvailable = -1;
     private static Passenger EmptySeat = null;
-    
+
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         Passenger[] seats = new Passenger[12];
@@ -53,9 +53,10 @@ public class App {
         System.out.println("");
         System.out.println("Seat\tName\tAge");
 
+        // skapar en for loop för printmanifest
         for (int i = 0; i < seats.length; i++) {
             int rowNumber = i + 1;
-            if (seats[i] == null) {
+            if (seats[i] == EmptySeat) {
                 // om raden är tom skriver bara ut radnumret
                 System.out.println(rowNumber);
             } else {
